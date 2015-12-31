@@ -1,0 +1,24 @@
+require 'spec_helper'
+
+describe 'workstation::default' do
+
+describe package('git') do
+  it { should be_installed }
+  end
+
+describe package('tree') do
+  it { should be_installed }
+  end
+
+describe package('nano') do
+  it { should be_installed }
+  end
+
+
+end
+
+
+IPADDRESS: #{node["ipaddress"]}
+HOSTNAME: #{node["hostname"]} 
+MEMORYIS: #{node["memory"]["total"]}
+CPUMEGAHERTZ: #{node["cpu"]["0"]["mhz"]}"
